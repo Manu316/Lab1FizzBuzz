@@ -10,23 +10,22 @@ class ConsoleBasedFizzBuzz implements FizzBuzz {
         }
     }
 
-    private String valorFizzBuzz(int number) {
-        if (number % 3 == 0 && number % 5 == 0) {
+    private String valorFizzBuzz(int numero) {
+        if (numero % 15 == 0) {
             return "FizzBuzz";
-        } else if (number % 5 == 0) {
+        } else if (numero % 5 == 0) {
             return "Buzz";
-        } else if (number % 3 == 0) {
+        } else if (numero % 3 == 0) {
             return "Fizz";
         } else {
-            return String.valueOf(number);
+            return String.valueOf(numero);
         }
     }
 }
 
 class Main {
     public static void main(String[] args) {
-        FizzBuzz multiplo = new ConsoleBasedFizzBuzz();
-        multiplo.print(0, 100);
+        FizzBuzz fizzBuzz = new ConsoleBasedFizzBuzz();
+        fizzBuzz.print(0, 100);
     }
 }
-
